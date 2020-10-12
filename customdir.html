@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chrset="UTF 8">
+    <title>Pastries</title>
+</head>
+<body>
+
+
+<script src="angular.min.js"></script>
+
+<h1> Photo Cakes</h1>
+
+<div ng-app="DemoApp">
+    <div ng-jwala=""></div>
+
+</div>
+
+<script type="text/javascript">
+    var app = angular.module('DemoApp',[]);
+    app.directive('ngJwala',function(){
+
+    return {
+        template: '<div>Cakes and Pastries  <br> here are some things in life that just require cake, most especially your  celebrating with the squad and want to snap a cute birthday picture.</div>'
+    }
+    });
+
+</script>
+
+</body>
+</html>

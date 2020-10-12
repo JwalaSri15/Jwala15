@@ -1,0 +1,53 @@
+<html>
+    <head>
+        
+        <link href="style1.css" type="text/css" rel="stylesheet"></link>
+        <script src="angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body >
+        <div ng-app='mainapp'>
+    <h1> Today's Offer!!!Hurry</h1>
+    <h2> Enter your order details:</h2>
+    <div ng-controller="CakeController">
+    <table>
+        <tr> 
+            <td>Enter your name:</td>
+            <td><input type="text" ng-model="name"></td>
+        </tr>
+        <tr>
+            <td>Enter the quantity of cake </td>
+            <td><input type="text" ng-model="quantity" ng-keyup="cal()"></td>
+        </tr>
+        <tr> 
+            <td>Flavours</td>
+            <td><input type="text" ng-model="Flavours"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" ng-model="Address"></td>
+        </tr>
+    </table>    
+        <table border="0">
+            <tr>
+                <td>Name(lowercase):</td>
+                <td>{{name | lowercase}}</td>
+            </tr>
+            <tr>
+                <td>quantity </td>
+                <td>{{quantity}}</td>
+            </tr>
+            <tr>
+                <td>Flavours</td>
+                <td>{{Flavours}}</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>{{Address}}</td>
+            </tr>
+        </table>
+      
+    
+    </div>
+</body>
+</html>

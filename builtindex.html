@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>Browse your own flavours</title> 
+      
+    <script src= "angular.min.js"> </script> 
+    <link href="sys.css" rel="stylesheet"></link>
+</head> 
+  
+<body ng-app="app" style="text-align: center"> 
+          
+    <h1 style="color:darkmagenta">Cakes and Pastries</h1> 
+    <h2 style="color:darkblue">Browse your own flavours</h2>                              
+      
+    <div ng-controller="geek" ng-init="StudentId=1"> 
+        Cakes flavours:  
+        <select ng-model="Sorting" ng-options="sort.name as  
+            sort.name for sort in sorting"></select> 
+          
+        <br><br><br><br><br> 
+          
+        Your favourites:  
+        <input type="text" ng-model="Sorting" /> 
+    </div> 
+    <style>
+        div {
+          background-color: lightseagreen;
+        }
+        
+    </style>
+      
+    <script> 
+        var app = angular.module("app", []); 
+        app.controller('geek', ['$scope', function ($scope) { 
+            $scope.sorting = [ 
+                { name: 'Vanilla', id: 1 },  
+                { name: 'Chocolate', id: 2 },  
+                { name: 'Butterscotch', id: 3 },
+                { name: 'Red velvet', id: 4 },
+                { name: 'Unicorn', id: 5 },
+                { name: 'Chocovanila', id: 6 },
+                { name: 'Raspberry', id: 7 },
+                { name: 'KitKat cake', id: 8 },
+                { name: 'Rainbow cake', id: 9 },
+                
+            ]; 
+        }]); 
+    </script> 
+</body> 
+  
+</html>   

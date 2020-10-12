@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<link href="style.css" rel="stylesheet"></link>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="fac.js"></script>
+    <script src="cust.js"></script>
+    
+  
+    
+  </head>
+  
+  <div class="container">
+    <img src="Cake.jpeg"  width="1500" height="400">
+    
+    <div class="centered">Cakes and Cookies Just for You!!!</div>
+  </div>
+  <body ng-app='ControllerAsApp'>
+    <h1>Cake's World</h1>
+    <p1>Welcome to a world of cakes that complement and complete your occasions. It is magical to explore and taste all the delicious and wonderful cakes.Be it for a birthday, anniversary or a casual sweet indulgence, our cake are here for you.
+    </p1>
+
+    <p2>Cakes on your choice!!</p2>
+    <h2> Cakes on your flavours</h2>
+    <div class="row">
+      <div class="column">
+        <a href="https://www.realfoodwholehealth.com/2011/02/homemade-truffle-recipe-with-variations/"><img src="Chocolates.jpeg" alt="Cake" width="400" height="400"></a>
+       
+      </div>
+      <div class="column">
+        <img src="Raspberry.jpeg" alt="Raspberry Chocolate" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="Vanilla.jpeg" alt="Vanilla buttercream" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="Blackforest.jpeg" alt="Blackforest" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="red velvet.jpeg" alt="Red velvet" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="Kitkat cake.jpeg" alt="Kitkat cake" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="Chocovanila.jpeg" alt="Chocovanila" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="Chocolate cake.jpeg" alt="Chocolate cake" width="400" height="400">
+      </div>
+      <div class="column">
+        <img src="rainbow.jpeg" alt="Rainbow" width="400" height="400">
+      </div>
+            
+    </div>
+
+      
+    <h1>Enter your Order</h1>
+    <h2>Enter your favourites</h2>
+    
+    <div id="list2" ng-controller='Cakelist2 as list2'>
+      <h3>Limited Edition!!Hurry!</h3>
+      
+      <input type="text" ng-model="list2.cakename" placeholder="Enter your flavours">
+      <button ng-click="list2.add();">Add</button>
+      <ul>
+        <li ng-repeat="item in list2.items">
+          {{ item.cakename }} 
+          <button ng-click="list2.remove($index);">Remove </button>
+        </li>
+      </ul>
+      <h2>Share your comments here:</h2>
+      <div class="error">Error: {{list2.errorMessage}}</div>
+    </div>
+    <textarea id="fill" rows="20" cols="100" ng-keypress="kp2=kp2-1"> </textarea>({{kp2}} words only allowed)
+  <br>
+  <br>
+    <label>Click me for browsing your flavours: 
+
+      <input type="checkbox" ng-model="check"> </label><br>
+
+     <button type="button" ng-disabled="!(check)"> 
+         Submit 
+     </button> 
+     <br><a href="builtindex.html">Browse</a><br>
+     <a href="inheindex.html">Click</a><br>
+     <a href="customdir.html">Photo Cakes</a>
+
+     <h2>Your Orders</h2>
+     <img src="cart1.jpeg" width="150" height="150">
+     <br>
+     <br>
+     <a href="lowerindex.html">Enroll your Orders</a>
+
+     <form action="https://google.com">
+      <input type="submit" value="Go to Google" />
+  </form>
+  <h3>Contact Us on:</h3>
+  <a href="https://www.instagram.com/"><img src="insta.jpeg" alt="Cake" style="width:42px;height:42px;"></a>
+
+
+  
+  </body>
+</html>

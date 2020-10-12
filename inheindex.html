@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+ <script src="angular.min.js">
+  </script>
+</head>
+<body ng-app="testApp">
+<div ng-controller="parentController" style =" text-align : center" >
+      <h2>Cakes and Pastries</h2>
+        NAME: {{message}}<br/>
+      	FLAVOUR: {{color}}<br/>
+      	<div ng-controller="childController">
+        <_________________________________________________________________></_________________________________________________________________>
+        	<br>MEG: {{meg}}<br/>
+          	FLAVOUR: {{color}}<br/>
+            CHOICE: {{type}}<br/> 
+    	</div>
+    </div></h2>
+ 
+    <script>
+        var ngApp = angular.module('testApp', []);
+ 
+        ngApp.controller('parentController', function ($scope) {
+       
+            $scope.message = "WELCOME"; 
+            $scope.color = "CHOCOLATE";
+        });
+ 
+       ngApp.controller('childController', function ($scope) {
+            $scope.meg = "Thank you for visiting";
+            $scope.color = "CHOCOLATE";
+         	$scope.type = "dutch truffle";
+        });
+    </script>
+	
+	
+</body>
+</html>
